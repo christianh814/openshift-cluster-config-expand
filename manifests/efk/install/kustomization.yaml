@@ -5,5 +5,6 @@ patchesJson6902:
       version: v1
       group: logging.openshift.io
       kind: ClusterLogging
+      namespace: openshift-logging
       name: instance
     path: clo-instance.yaml
