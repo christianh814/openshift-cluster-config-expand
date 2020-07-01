@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: bgdk-green-app
+spec:
+  destination:
+    namespace: bgd
+    server: https://kubernetes.default.svc
+  project: bgdk
+  source:
+    path: bgdk/overlays/cluster2
+    repoURL: https://github.com/christianh814/gitops-examples
+    targetRevision: master
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  sync:
+    comparedTo:
+      destination:
+        namespace: bgd
+        server: https://kubernetes.default.svc
+      source:
+        path: bgdk/overlays/cluster2
+        repoURL: https://github.com/christianh814/gitops-examples
+        targetRevision: master

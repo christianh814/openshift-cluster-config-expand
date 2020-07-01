@@ -1,0 +1,9 @@
+bases:
+- ../base
+patchesJson6902:
+  - target:
+      version: v1
+      group: logging.openshift.io
+      kind: ClusterLogging
+      name: instance
+    path: clo-instance.yaml

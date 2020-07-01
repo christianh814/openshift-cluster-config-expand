@@ -1,0 +1,8 @@
+resources:
+- clo-instance.yaml
+- clo-namespace.yaml
+- clo-operatorgroup.yaml
+- clo-sub.yaml
+- es-operatorgroup.yaml
+- es-sub.yaml
+- oor-namespace.yaml

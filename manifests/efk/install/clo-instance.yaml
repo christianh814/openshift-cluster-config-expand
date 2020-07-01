@@ -1,0 +1,3 @@
+- op: replace
+  path: /spec/logStore/elasticsearch/storage/storageClassName
+  value: "gp2"

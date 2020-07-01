@@ -1,0 +1,22 @@
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: bgdk
+spec:
+  clusterResourceWhitelist:
+  - group: '*'
+    kind: '*'
+  destinations:
+  - namespace: '*'
+    server: '*'
+  sourceRepos:
+  - '*'
+  roles:
+  - description: Marketing get view and sync
+    name: marketing
+    policies:
+    - p, role:marketing, applications, get, bgdk/*, allow
+    - p, role:marketing, applications, sync, bgdk/*, allow
+    - p, role:marketing, projects, get, bgdk, allow
+  sourceRepos:
+  - '*'
