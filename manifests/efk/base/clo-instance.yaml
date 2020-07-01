@@ -1,6 +1,8 @@
 apiVersion: "logging.openshift.io/v1"
 kind: "ClusterLogging"
 metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "6"
   name: "instance"
   namespace: "openshift-logging"
 spec:
