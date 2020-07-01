@@ -5,4 +5,6 @@ metadata:
     argocd.argoproj.io/sync-wave: "1"
   name: openshift-operators-redhat
   namespace: openshift-operators-redhat 
-spec: {}
+spec:
+  targetNamespaces:
+  - openshift-operators-redhat
