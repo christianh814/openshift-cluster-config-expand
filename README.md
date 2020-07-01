@@ -1,7 +1,7 @@
 # Openshift Cluster Config Expanded
 Setting up an OpenShift cluster using Kustomize and ArgoCD by using [openshift-cluster-config](https://github.com/christianh814/openshift-cluster-config) as a base
 
-This is to show you can load in core components and use `kustomize` to modify it/add to it for your specifc cluster.
+This is to show you can load in core components from one repo and use `kustomize` to modify it/add to it for your specifc cluster with anotherin a GitOps method of managing clusters.
 
 
 ## Installing ArgoCD
