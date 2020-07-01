@@ -24,3 +24,28 @@ no matches for kind "ArgoCD" in version "argoproj.io/v1alpha1"
 
 That's okay, just run the `oc apply -k` command again.
 
+## Deploying this Repo
+
+To configure your cluster to this repo run
+
+```
+oc apply -k https://github.com/christianh814/openshift-cluster-config-expand/cluster-config/config/overlays/default
+```
+
+This will configure your server with the following.
+
+Everything Mentioned in the [OpenShift Cluster Config repo](https://github.com/christianh814/openshift-cluster-config#deploying-this-repo)
+
+Additionally...
+
+* Deploying the EFK stack via OLM
+  * Assumes you have [big enough](https://docs.openshift.com/container-platform/latest/logging/cluster-logging-deploying.html#cluster-logging-deploy-console_cluster-logging-deploying) workers
+  * Assumes you're on aws using [`gp2`](manifests/efk/install/clo-instance.yaml#L3) as your `storageClass`
+* Deploys an app called BGD into the `bgd` namespace
+  * The `marketing` group has `edit` access to this namespace
+* ArgoCD
+  * The `marketing` group can sync the `bgdk-green-app` application in the `bgdk` project.
+
+## Making Changes
+
+Either a PR to this repo or the [OpenShift Cluster Config repo](https://github.com/christianh814/openshift-cluster-config)...it's GitOps!
