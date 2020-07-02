@@ -1,7 +1,6 @@
 apiVersion: "logging.openshift.io/v1"
 kind: "ClusterLogging"
 metadata:
-  annotations:
   name: "instance"
   namespace: "openshift-logging"
 spec:
@@ -12,8 +11,11 @@ spec:
       nodeCount: 3
       storage:
         storageClassName: "PATCH_ME"
-        size: 200G
+        size: 100G
       redundancyPolicy: "SingleRedundancy"
+      resources:
+        request:
+          memory: 4G
   visualization:
     type: "kibana"
     kibana:
