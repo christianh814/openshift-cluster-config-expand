@@ -34,9 +34,9 @@ oc apply -k https://github.com/christianh814/openshift-cluster-config-expand/clu
 
 This will configure your server with the following.
 
-Everything Mentioned in the [OpenShift Cluster Config repo](https://github.com/christianh814/openshift-cluster-config#deploying-this-repo)
+Everything Mentioned in the [OpenShift Cluster Config repo](https://github.com/christianh814/openshift-cluster-config#deploying-this-repo) is [included in this repo](cluster-config/config/overlays/default/kustomization.yaml#L7) (as to not duplicate YAML).
 
-Additionally...
+This repo adds the additional settings/configs/apps...
 
 * Deploying the EFK stack via OLM
   * Assumes you have [big enough](https://docs.openshift.com/container-platform/latest/logging/cluster-logging-deploying.html#cluster-logging-deploy-console_cluster-logging-deploying) workers
