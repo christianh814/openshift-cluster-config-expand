@@ -2,5 +2,4 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
 resources:
-- github.com/christianh814/openshift-cluster-config/manifests/rbac/base
 - project-role-binding-bgd.yaml
