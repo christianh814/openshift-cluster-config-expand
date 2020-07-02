@@ -40,7 +40,7 @@ Additionally...
 
 * Deploying the EFK stack via OLM
   * Assumes you have [big enough](https://docs.openshift.com/container-platform/latest/logging/cluster-logging-deploying.html#cluster-logging-deploy-console_cluster-logging-deploying) workers
-  * Assumes you're on aws using [`thin`](manifests/efk/install/clo-instance.yaml#L3) as your `storageClass`
+  * Assumes you're on vCenter using [`thin`](manifests/efk/install/clo-instance.yaml#L3) as your `storageClass`
 * Deploys an app called BGD into the `bgd` namespace
   * The `marketing` group has `edit` access to this namespace
 * ArgoCD
