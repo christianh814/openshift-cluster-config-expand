@@ -3,7 +3,6 @@ kind: Subscription
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "1"
-    argocd.argoproj.io/hook: PreSync
   name: "elasticsearch-operator"
   namespace: "openshift-operators-redhat" 
 spec:
