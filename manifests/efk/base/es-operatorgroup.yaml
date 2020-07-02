@@ -3,6 +3,7 @@ kind: OperatorGroup
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "0"
+    argocd.argoproj.io/hook: PreSync
   name: openshift-operators-redhat
   namespace: openshift-operators-redhat 
 spec:

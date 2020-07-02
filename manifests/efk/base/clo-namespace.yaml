@@ -4,6 +4,7 @@ metadata:
   name: openshift-logging
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
+    argocd.argoproj.io/hook: PreSync
     openshift.io/node-selector: ""
   labels:
     openshift.io/cluster-monitoring: "true"

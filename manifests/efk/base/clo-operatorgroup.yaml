@@ -3,6 +3,7 @@ kind: OperatorGroup
 metadata:
   annotations:
     argocd.argoproj.io/sync-wave: "2"
+    argocd.argoproj.io/hook: PreSync
   name: cluster-logging
   namespace: openshift-logging 
 spec:
