@@ -7,4 +7,3 @@ bases:
 - github.com/christianh814/openshift-cluster-config/cluster-config/config/overlays/default
 - ../../../applications/base
 - ../../../projects/base
-- ../../../../manifests/rbac/base
