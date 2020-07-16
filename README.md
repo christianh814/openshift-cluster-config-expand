@@ -6,7 +6,7 @@ This is to show you can load in core components from one repo and use `kustomize
 
 ## Installing ArgoCD
 
-> :warning: This is based on the argocd operator v0.9 using an "Automatic" update strategy ...[Andrew](https://github.com/pittar) says there's breaking changes coming in v0.10 - so be warned!
+> :warning: This is based on the argocd operator v0.0.11 using an "Automatic" update strategy on OpenShift 4.4.9
 
 To install argocd using the operator, use the [openshift-cluster-config repo](https://github.com/christianh814/openshift-cluster-config#installing-argocd)
 
