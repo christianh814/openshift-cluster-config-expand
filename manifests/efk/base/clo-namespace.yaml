@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Namespace
 metadata:
-  name: openshift-logging
+  name: openshift-operators-redhat
   annotations:
     argocd.argoproj.io/sync-wave: "-5"
     openshift.io/node-selector: ""
