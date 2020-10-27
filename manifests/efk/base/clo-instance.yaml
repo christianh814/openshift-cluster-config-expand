@@ -14,7 +14,7 @@ spec:
       nodeCount: 3
       storage:
         storageClassName: "PATCH_ME"
-        size: 100G
+        size: 200G
       redundancyPolicy: "SingleRedundancy"
       resources:
         request:
