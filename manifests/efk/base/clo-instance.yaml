@@ -23,9 +23,7 @@ spec:
         storageClassName: "PATCH_ME"
         size: 200G
       redundancyPolicy: "SingleRedundancy"
-      resources:
-        request:
-          memory: 4G
+      resources: {}
   visualization:
     type: "kibana"
     kibana:
