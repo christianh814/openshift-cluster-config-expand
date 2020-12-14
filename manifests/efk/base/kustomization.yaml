@@ -8,3 +8,4 @@ resources:
 - es-operatorgroup.yaml
 - es-sub.yaml
 - oor-namespace.yaml
+- cli-job.yaml
