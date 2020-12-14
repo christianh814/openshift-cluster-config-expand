@@ -21,7 +21,7 @@ metadata:
   name: cli-job-sa-rolebinding
 roleRef:
   apiGroup: rbac.authorization.k8s.io
-  kind: Role
+  kind: ClusterRole
   name: cli-job-sa-role
 subjects:
   - kind: ServiceAccount
