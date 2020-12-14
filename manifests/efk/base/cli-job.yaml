@@ -1,0 +1,36 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  annotations:
+    argocd.argoproj.io/sync-wave: "6"
+  name: cluster-loggig-wait-job
+  namespace: openshift-logging
+spec:
+  template:
+    spec:
+      containers:
+        - image: registry.redhat.io/openshift4/ose-cli:v4.4
+          command:
+            - /bin/bash
+            - -c
+            - |
+              export HOME=/tmp/clo
+              echo ""
+              echo -n "Waiting for the Logging CRD to become available."
+              sleep $SLEEP
+              until oc wait --for condition=established --timeout=60s crd/clusterloggings.logging.openshift.io -n openshift-logging
+              do
+                echo -n "...still waiting"
+                sleep $SLEEP
+              done
+              echo "DONE"
+          imagePullPolicy: Always
+          name: cluster-loggig-wait-job
+          env:
+          - name: SLEEP
+            value: "5"
+      dnsPolicy: ClusterFirst
+      restartPolicy: OnFailure
+      serviceAccount: cli-job-sa
+      serviceAccountName: cli-job-sa
+      terminationGracePeriodSeconds: 30

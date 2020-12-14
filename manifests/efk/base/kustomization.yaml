@@ -1,4 +1,6 @@
 resources:
+- clo-job-sa.yaml
+- clo-job-sa-rbac.yaml
 - clo-instance.yaml
 - clo-namespace.yaml
 - clo-operatorgroup.yaml

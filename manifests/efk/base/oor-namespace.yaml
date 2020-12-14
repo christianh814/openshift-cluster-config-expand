@@ -3,7 +3,7 @@ kind: Namespace
 metadata:
   name: openshift-operators-redhat
   annotations:
-    argocd.argoproj.io/sync-wave: "-6"
+    argocd.argoproj.io/sync-wave: "0"
     openshift.io/node-selector: ""
   labels:
     openshift.io/cluster-monitoring: "true"
