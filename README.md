@@ -3,28 +3,11 @@ Setting up an OpenShift cluster using Kustomize and ArgoCD by using [openshift-c
 
 This is to show you can load in core components from one repo and use `kustomize` to modify it/add to it for your specifc cluster with anotherin a GitOps method of managing clusters.
 
+This repo sets up OpenShift with Day 2 thingys via Argo CD. It also uses Dex (unsupported) for Authentication with OpenShift.
 
 ## Installing ArgoCD
 
-> :warning: This is based on the argocd community operator using an "Automatic" update strategy on OpenShift 4.7 deploying ArgoCD 1.8.2
-
-To install argocd using the operator, use the [openshift-cluster-config repo](https://github.com/christianh814/openshift-cluster-config#installing-argocd)
-
-```
-until oc apply -k https://github.com/christianh814/openshift-cluster-config/argocd/install; do sleep 2; done
-```
-
-This will start the installation of argocd. You can monitor the install with a `watch` on the following command.
-
-```
-oc get pods -n argocd
-```
-
-To get your argocd route (where you can login)
-
-```
-oc get route argocd-server -n argocd -o jsonpath='{.spec.host}{"\n"}'
-```
+Install Argo CD via the Operator Hub as described in the [cluster config repo](https://github.com/christianh814/openshift-cluster-config#installing-argocd)
 
 ## Deploying this Repo
 

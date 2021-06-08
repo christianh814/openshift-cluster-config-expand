@@ -15,12 +15,3 @@ spec:
     automated:
       prune: true
       selfHeal: true
-  sync:
-    comparedTo:
-      destination:
-        namespace: bgd
-        server: https://kubernetes.default.svc
-      source:
-        path: bgdk/overlays/cluster2
-        repoURL: https://github.com/christianh814/gitops-examples
-        targetRevision: master
