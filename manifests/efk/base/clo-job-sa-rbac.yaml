@@ -26,3 +26,4 @@ roleRef:
 subjects:
   - kind: ServiceAccount
     name: cli-job-sa
+    namespace: openshift-logging
