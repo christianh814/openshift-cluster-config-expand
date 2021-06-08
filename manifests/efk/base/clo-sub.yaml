@@ -6,7 +6,7 @@ metadata:
   name: cluster-logging
   namespace: openshift-logging
 spec:
-  channel: "4.7"
+  channel: "5.0"
   name: cluster-logging
   source: redhat-operators
   sourceNamespace: openshift-marketplace

@@ -6,7 +6,7 @@ metadata:
   name: "elasticsearch-operator"
   namespace: "openshift-operators-redhat" 
 spec:
-  channel: "4.6" 
+  channel: "5.0" 
   installPlanApproval: "Automatic"
   source: "redhat-operators" 
   sourceNamespace: "openshift-marketplace"
