@@ -20,4 +20,4 @@ spec:
       backoff:
         duration: 15s # the amount to back off. Default unit is seconds, but could also be a duration (e.g. "2m", "1h")
         factor: 2 # a factor to multiply the base duration after each failed retry
-        maxDuration: 30m # the maximum amount of time allowed for the backoff strategy
+        maxDuration: 5m # the maximum amount of time allowed for the backoff strategy
