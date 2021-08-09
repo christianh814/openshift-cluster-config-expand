@@ -18,5 +18,3 @@ spec:
     - p, role:marketing, applications, get, bgdk/*, allow
     - p, role:marketing, applications, sync, bgdk/*, allow
     - p, role:marketing, projects, get, bgdk, allow
-  sourceRepos:
-  - '*'
