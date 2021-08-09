@@ -1,7 +1,0 @@
-apiVersion: v1
-kind: ServiceAccount
-metadata:
-  annotations:
-    argocd.argoproj.io/sync-wave: "1"
-  name: cli-job-sa
-  namespace: openshift-logging
