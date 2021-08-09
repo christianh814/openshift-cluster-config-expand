@@ -3,13 +3,8 @@ kind: Kustomization
 commonAnnotations:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
 resources:
-<<<<<<< HEAD
-=======
-- clo-job-sa.yaml
-- clo-job-sa-rbac.yaml
-- cli-job.yaml
->>>>>>> 3b85b090e9bb0ed3a8aff9e76978519505b3215b
 - clo-instance.yaml
+- clo-job-sa-rbac.yaml
 - clo-namespace.yaml
 - clo-operatorgroup.yaml
 - clo-sub.yaml
